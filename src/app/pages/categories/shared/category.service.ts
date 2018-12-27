@@ -69,7 +69,4 @@ private apiPath = 'api/categories';
     console.log('Erro na requisão! => ', error);
     return throwError(error);
   }
-
-
-
 }
