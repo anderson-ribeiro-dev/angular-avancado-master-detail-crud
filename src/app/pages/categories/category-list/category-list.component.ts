@@ -24,7 +24,7 @@ export class CategoryListComponent implements OnInit {
     );
   }
 
-  deleteCategory(category){
+  deleteCategory(category) {
     const mustDelete = confirm('Deseja realmente excluir esse item! '); // aviso delete;
 
     if ( mustDelete ) {
