@@ -24,7 +24,7 @@ private apiPath = 'api/categories';
 
   getById(id: number): Observable<Category> {
     // requisão
-    const url = `${this.apiPath}/$(id)`;
+    const url = `${this.apiPath}/${id}`;
     return this.http.get(url).pipe(
       catchError(this.handleError),
       map(this.jsonDataToCategory)
@@ -47,7 +47,7 @@ private apiPath = 'api/categories';
   }
 
   delete(id: number): Observable<any> {
-    const url = `${this.apiPath}/$(id)`;
+    const url = `${this.apiPath}/${id}`;
     return this.http.delete(url).pipe(
       catchError(this.handleError),
       map(() => null)
