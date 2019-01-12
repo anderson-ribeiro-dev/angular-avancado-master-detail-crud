@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +18,8 @@ import { InMemoryDatabase } from './in-memory-database'; // remover server real
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDatabase) // remover server real
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDatabase), // remover server real
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

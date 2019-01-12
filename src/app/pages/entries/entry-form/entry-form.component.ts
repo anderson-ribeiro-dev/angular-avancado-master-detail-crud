@@ -26,6 +26,34 @@ export class EntryFormComponent implements OnInit,  AfterContentChecked {
   submittingForm = false; // desabilita envio duplicado de requisão
   entry: Entry = new Entry;
 
+  // máscaras
+  imaskConfig = {
+    mask: Number,
+    scale: 2, // qtidade decimais
+    thousandsSeparator: '', // separador de milhas
+    padFractionalZeros: true, // adicionar os zeros
+    normalizeZeros: true,
+    radix: ',',
+  };
+
+  // idioma
+  ptBR = {
+    firstDayOfWeek: 0,
+    dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+    dayNamesShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+    dayNamesMin: ['Do', 'Se', 'Te', 'Qu', 'Qu', 'Se', 'Sa'],
+    monthNames: [
+      'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho',
+      'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+    ],
+    monthNamesShorts: [
+      'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul',
+      'Ago', 'Set', 'Out', 'Nov', 'Dez',
+    ],
+    today: 'Hoje',
+    clear: 'Limpar'
+  };
+
   constructor(
     // dependências
     private entryService: EntryService,
