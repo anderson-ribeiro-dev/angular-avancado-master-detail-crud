@@ -1,4 +1,4 @@
-import { CategoryService } from './../../categories/shared/category.service';
+
 import { CategoryFormComponent } from './../../categories/category-form/category-form.component';
 
 
@@ -94,7 +94,7 @@ export class EntryFormComponent implements OnInit,  AfterContentChecked {
   }
 
   // métodos de despesa e receita
-  get typeOptions(): Array<any>{
+  get typeOptions(): Array<any> {
     return Object.entries(Entry.types).map(
       ([value, text]) => {
         return {
@@ -121,10 +121,10 @@ export class EntryFormComponent implements OnInit,  AfterContentChecked {
       id: [null],
       name: [null, [Validators.required, Validators.minLength(2)]],
       description: [null],
-      type: [null, Validators.required],
+      type: ['expense', Validators.required],
       amount: [null, Validators.required],
       date: [null, Validators.required],
-      paid: [null, Validators.required],
+      paid: [true, Validators.required],
       categoryId: [null, Validators.required]
     });
   }
