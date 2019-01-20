@@ -19,7 +19,6 @@ export class Entry {
   };
 
   // lista paga/aberta
-
   get paidText(): string {
     return this.paid ? 'Pago' : 'Pedente';
   }
