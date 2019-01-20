@@ -15,11 +15,10 @@ export class Entry {
 
   static types = {
     expense: 'Despesa',
-    renevue: 'Receita'
+    revenue: 'Receita'
   };
 
   // lista paga/aberta
-
   get paidText(): string {
     return this.paid ? 'Pago' : 'Pedente';
   }
